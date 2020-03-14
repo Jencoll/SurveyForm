@@ -1,0 +1,104 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="Resources/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Questionnaire d'appréciation</h1>
+        <p id="description">Merci de nous aider à améliorer la plateforme freeCodeCamp.</p>
+    </header>
+
+    <main>
+        <form id="survey-form">
+            <div class="question">
+                <label id="name-label" for="name">Nom</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Inscrivez votre nom" required>
+            </div>
+            <div class="question">
+                <label id="email-label" for="email">Courriel</label>
+                <input type="email" name="email" id="email" class="form-control large" placeholder="Inscrivez votre adresse courriel" required>
+                <input type="email" name="email" id="email" class="form-control small" placeholder="Inscrivez votre courriel" required>
+            </div>
+            <div class="question">
+                <label id="number-label" for="age">Âge (facultatif)</label>
+                <input type="number" name="age" id="number" class="form-control" min="9" max="100" placeholder="Indiquez votre âge">
+            </div>
+            <div class="question">
+                <p>Quelle option décrit le mieux votre situation professionnelle?</p>
+                <select name="situation" id="dropdown" class="form-control large" required>
+                    <option disabled selected value class="option large">Sélectionnez ce qui s'applique à votre situation</option>
+                    <option value="student">Étudiant(e)</option>
+                    <option value="employed">Employé(e) à temps plein</option>
+                    <option value="part-time">Employé(e) à temps partiel</option>
+                    <option value="freelance">Pigiste</option>
+                    <option value="preferNo">Préfère ne pas répondre</option>
+                    <option value="other">Autre</option>
+                </select>
+                <select name="situation" id="dropdown" class="form-control small" required>
+                    <option disabled selected value class="option small">Votre situation</option>
+                    <option value="student">Étudiant(e)</option>
+                    <option value="employed">Employé(e) à temps plein</option>
+                    <option value="part-time">Employé(e) à temps partiel</option>
+                    <option value="freelance">Pigiste</option>
+                    <option value="preferNo">Préfère ne pas répondre</option>
+                    <option value="other">Autre</option>
+                </select>
+            </div>
+            <div class=question>
+                <p>Recommanderiez-vous freeCodeCamp à un(e) ami(e)?</p>
+                <label for="definitely">
+                    <input id="definitely" class="vertical" value="definitely" name="recommend" type="radio">Définitivement
+                </label>
+                <label for="maybe">
+                    <input id="maybe" class="vertical" value="maybe" name="recommend" type="radio">Peut-être
+                </label>
+                <label for="no">
+                    <input id="no" class="vertical" value="no" name="recommend" type="radio">Pas du tout
+                </label>
+            </div>
+            <div class="question">
+                <p>Qu'est-ce qui devrait être amélioré? (Sélectionnez tout ce qui s'applique.)</p>
+                <label for="front-end-projects">
+                    <input type="checkbox" class="checkbox" id="front-end-projects" value="front-end-projects" name="improved">Projets front-end
+                </label>
+                <label for="back-end-projects">
+                    <input type="checkbox" class="checkbox" id="back-end-projects" value="back-end-projects" name="improved">Projets back-end
+                </label>
+                <label for="data-visualization">
+                    <input type="checkbox" class="checkbox" id="data-visualization" value="data-visualization" name="improved">Visualisation de données
+                </label>
+                <label for="challenges">
+                    <input type="checkbox" class="checkbox" id="challenges" value="challenges" name="improved">Défis
+                </label>
+                <label for="open-source-community">
+                    <input type="checkbox" class="checkbox" id="open-source-community" value="open-source-community" name="improved">Communauté des logiciels libres
+                </label>
+                <label for="videos">
+                    <input type="checkbox" class="checkbox" id="videos" value="videos" name="improved">Vidéos
+                </label>
+                <label for="city-meetups">
+                    <input type="checkbox" class="checkbox" id="city-meetups" value="city-meetups" name="improved">Rencontres dans certaines villes
+                </label>
+                <label for="wiki">
+                    <input type="checkbox" class="checkbox" id="wiki" value="wiki" name="improved">Wiki
+                </label>
+                <label for="forum">
+                    <input type="checkbox" class="checkbox" id="forum" value="forum" name="improved">Forum
+                </label>
+            </div>
+            <div class="question">
+                <p>Avez-vous des commentaires ou des suggestions à nous faire?</p>
+                <textarea name="comment" id="comments" cols="30" rows="10" placeholder="Écrivez vos commentaires ici..."></textarea>
+            </div>
+            <div class="question">
+                <button type="submit" id="submit" class="button"><span>Soumettre</span></button>
+            </div>            
+        </form>
+    </main>
+</body>
+</html>
